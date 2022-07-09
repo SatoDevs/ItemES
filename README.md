@@ -16,7 +16,7 @@ sandwichAttach.damage = 5;
   
 //Creating the item  
 ItemManager.createItem("Sandwich", "Just a regular Sandwich");  
-sandwich.property.Add(sandwichEdible);  
-sandwich.property.Add(new EquipProperty());  
-sandwich.property.Add(sandwichAttack);  
-sandwich.property.Add(new ThrowProperty());  
+ItemManager.AddProperty(0, sandwichEdible);  //adds said property to item ID 0  
+ItemManager.AddProperty(0, new EquipProperty());  
+ItemManager.AddProperty(0, sandwichAttack);  
+ItemManager.AddProperty(0, new ThrowProperty());  
