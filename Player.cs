@@ -8,10 +8,14 @@ public class Player
             //Eat the item
             if (Keyboard.GetState().IsKeyDown(Keys.E))
             {
-                if (ItemManager.GetProperty<Edible>(selectedItem) != null)
+                Item i = inventory.items[selectedItem].item;
+                if (ItemManager.GetProperty<Edible>(i.ID) != null)
                 {
-                    ItemManager.GetProperty<Edible>(selectedItem).Eat();
-                    Debug.WriteLine("You eat " + ItemManager.items[selectedItem].name);
+                    ItemManager.GetProperty<Edible>(selectedItem).Eat(i);
+                }
+                else
+                {
+                    Debug.WriteLine(inventory.items[selectedItem].item.name + " is not edible");
                 }
             }
         }
