@@ -7,7 +7,7 @@ public static class ItemManager
         public static void createItem(string name, string description)
         {
             Item i = new Item();
-            i.ID = itemNumber;
+            i.ID = items.Count;
             i.properties = new List<Property>();
             i.name = name;
             i.description = description;
