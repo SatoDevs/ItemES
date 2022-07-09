@@ -1,4 +1,13 @@
-public static class ItemManager
+ public class Item
+    {
+        public int ID;
+        public string name;
+        public string description;
+        public List<Property> properties;
+        public Rectangle drawRectangle;
+    }
+
+    public static class ItemManager
     {
         public static int itemNumber = 0;
         public static List<Item> items = new List<Item>();
@@ -28,6 +37,13 @@ public static class ItemManager
         public static void addProperty(int id, Property property)
         {
             items[id].properties.Add(property);
+        }
+
+        public static void removeProperty<T>(int id) where T : Property
+        {
+            foreach (Property c in items[id].properties.ToList())
+                if (c is T r)
+                    items[id].properties.Remove(c);
         }
 
         //Returns the property of specified type from the specified item 
