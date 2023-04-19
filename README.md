@@ -1,4 +1,4 @@
-# ItemECS
+# ItemES
 Experimental Entity System for game item modularity
 kind of an ECS, kind of not
 
