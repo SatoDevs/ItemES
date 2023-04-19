@@ -1,5 +1,5 @@
 # ItemECS
-Experimental ECS for game item modularity
+Experimental Entity System for game item modularity
 kind of an ECS, kind of not
 
 This system allows you to create any kind of property (behavior/functionnality) and add them to items.
